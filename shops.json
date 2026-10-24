@@ -4,15 +4,15 @@
     "name": "아카이브류",
     "parser": "archive",
     "base_url": "https://archiveryu.com",
-    "list_path": "/product/list.html?cate_no=150",
-    "max_pages": 2
+    "list_path": "/product/list.html?cate_no=150"
   },
   {
     "id": "thoughts",
     "name": "사색",
     "parser": "thoughts",
     "base_url": "https://thoughts.ai.kr",
-    "list_path": "/product/list.html?cate_no=123",
-    "max_pages": 2
+    "list_paths": [
+      "/product/list.html?cate_no=125"
+    ]
   }
 ]

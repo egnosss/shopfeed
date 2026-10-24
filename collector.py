@@ -97,20 +97,39 @@ def parse_thoughts(html, shop):
 PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts}
 
 
+MAX_PAGES_DEFAULT = 100  # 끝을 못 찾는 경우를 막는 안전장치. 몰이 끝 페이지를 주면 그 전에 멈춘다
+
+
+def fetch(url, tries=3):
+    for attempt in range(1, tries + 1):
+        try:
+            res = requests.get(url, headers=HEADERS, timeout=20)
+            res.raise_for_status()
+            return res.text
+        except requests.RequestException:
+            if attempt == tries:
+                raise
+            time.sleep(2 * attempt)
+
+
 def collect_shop(shop):
+    """list_paths(없으면 list_path)에 적힌 목록을 끝 페이지까지 모두 읽는다. 상품이 겹치면 한 번만 담는다."""
+    parse = PARSERS[shop.get("parser", "archive")]
+    paths = shop.get("list_paths") or [shop["list_path"]]
+    limit = shop.get("max_pages") or MAX_PAGES_DEFAULT
     products, seen = [], set()
-    for page in range(1, shop.get("max_pages", 1) + 1):
-        url = f"{shop['base_url']}{shop['list_path']}&page={page}"
-        res = requests.get(url, headers=HEADERS, timeout=20)
-        res.raise_for_status()
-        items = [p for p in PARSERS[shop.get("parser", "archive")](res.text, shop) if p["product_no"] not in seen]
-        if not items:
-            break
-        for p in items:
-            seen.add(p["product_no"])
-        products.extend(items)
-        print(f"  {shop['name']} page {page}: {len(items)}개")
-        time.sleep(DELAY_SEC)
+    for path in paths:
+        before = len(products)
+        for page in range(1, limit + 1):
+            html = fetch(f"{shop['base_url']}{path}&page={page}")
+            items = [p for p in parse(html, shop) if p["product_no"] not in seen]
+            if not items:
+                break
+            for p in items:
+                seen.add(p["product_no"])
+            products.extend(items)
+            time.sleep(DELAY_SEC)
+        print(f"  {shop['name']} {path}: {len(products) - before}개 (페이지 {page - 1 if not items else page})")
     return products
 
 
