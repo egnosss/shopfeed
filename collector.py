@@ -12,6 +12,8 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+from classify import classify
+
 HERE = Path(__file__).parent
 HEADERS = {"User-Agent": "Mozilla/5.0 (personal shopfeed collector)"}
 DELAY_SEC = 1.0  # 몰 서버 부담을 줄이려는 페이지 간 대기
@@ -150,6 +152,9 @@ def main():
         except Exception as e:  # 한 몰이 실패해도 나머지는 계속, 실패한 몰은 이전 결과 유지
             print(f"  실패: {e}", file=sys.stderr)
             all_products.extend(p for p in previous if p["shop_id"] == shop["id"])
+
+    for p in all_products:
+        p["category"] = classify(p["name"])  # 이전 결과를 유지한 몰의 상품도 같은 규칙으로 다시 분류
 
     (HERE / "seen.json").write_text(json.dumps(seen, ensure_ascii=False, indent=1), encoding="utf-8")
     out = HERE / "products.json"

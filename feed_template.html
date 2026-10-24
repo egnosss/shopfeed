@@ -75,6 +75,10 @@ h1 {
   background: var(--chip); color: var(--ink); font: 500 13px var(--body); padding: 7px 14px;
 }
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.filters { padding-top: 2px; }
+.cats .chip { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.cats .chip[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); box-shadow: none; }
+.chip .c { margin-left: 5px; font-size: 11px; font-variant-numeric: tabular-nums; opacity: .65; }
 
 .tools { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; }
 .toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer; user-select: none; }
@@ -143,7 +147,11 @@ select {
       <button class="tab" role="tab" id="tab-all" aria-selected="true">전체<span class="n" id="n-all"></span></button>
       <button class="tab" role="tab" id="tab-fav" aria-selected="false">찜<span class="n" id="n-fav"></span></button>
     </div>
+  </header>
+
+  <section class="filters">
     <div class="chips" id="chips"></div>
+    <div class="chips cats" id="cats"></div>
     <div class="tools">
       <label class="toggle"><input type="checkbox" id="only-new"><span class="sw"></span>신상만</label>
       <select id="sort" aria-label="정렬">
@@ -152,7 +160,7 @@ select {
         <option value="high">높은 가격순</option>
       </select>
     </div>
-  </header>
+  </section>
 
   <main>
     <div class="grid" id="grid"></div>
@@ -167,7 +175,8 @@ let DATA = [];
 let COLLECTED = "";
 const NEW_DAYS = 3;
 
-const state = { tab: "all", shop: "all", onlyNew: false, sort: "latest", favs: new Set() };
+const CATS = ["아우터", "니트·가디건", "상의", "하의", "원피스", "잡화", "기타"];
+const state = { tab: "all", shop: "all", category: "all", onlyNew: false, sort: "latest", favs: new Set() };
 const $ = (id) => document.getElementById(id);
 
 try {
@@ -203,8 +212,28 @@ function renderChips() {
   });
 }
 
+// 선택한 몰 안에서 실제로 있는 종류만 개수와 함께 칩으로 보여준다
+function renderCats() {
+  const inShop = DATA.filter((p) => state.shop === "all" || p.shop_id === state.shop);
+  const count = {};
+  inShop.forEach((p) => { count[p.category] = (count[p.category] || 0) + 1; });
+  if (state.category !== "all" && !count[state.category]) state.category = "all";
+  const box = $("cats");
+  box.innerHTML = "";
+  [["all", "전체 종류", inShop.length], ...CATS.filter((c) => count[c]).map((c) => [c, c, count[c]])]
+    .forEach(([id, label, n]) => {
+      const b = document.createElement("button");
+      b.className = "chip";
+      b.innerHTML = label + '<span class="c">' + n + "</span>";
+      b.setAttribute("aria-pressed", String(state.category === id));
+      b.onclick = () => { state.category = id; render(); };
+      box.appendChild(b);
+    });
+}
+
 function visible() {
   let list = DATA.filter((p) => state.shop === "all" || p.shop_id === state.shop);
+  if (state.category !== "all") list = list.filter((p) => p.category === state.category);
   if (state.tab === "fav") list = list.filter((p) => state.favs.has(key(p)));
   if (state.onlyNew) list = list.filter((p) => p.is_new);
   const by = {
@@ -218,6 +247,7 @@ function visible() {
 const HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z" stroke-linejoin="round"/></svg>';
 
 function render() {
+  renderCats();
   const list = visible();
   const grid = $("grid");
   grid.innerHTML = "";
