@@ -1,0 +1,294 @@
+<title>자사몰 모아보기</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 레이아웃: 상단 고정 바(제목·필터·정렬) 아래로 2열 사진 카드 피드가 이어지는 모바일 우선 구조 */
+:root {
+  --bg: #EEF0EE;
+  --surface: #FFFFFF;
+  --ink: #171918;
+  --muted: #667069;
+  --line: #D9DDDA;
+  --chip: #E3E7E4;
+  --accent: #2B45F5;
+  --on-accent: #FFFFFF;
+  --sold: rgba(238, 240, 238, .78);
+  --display: "Archivo", "Noto Sans KR", system-ui, sans-serif;
+  --body: "Noto Sans KR", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111312; --surface: #1A1D1B; --ink: #ECEFED; --muted: #8E9892;
+    --line: #2A2E2C; --chip: #232725; --accent: #8496FF; --on-accent: #0E1230;
+    --sold: rgba(17, 19, 18, .78); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111312; --surface: #1A1D1B; --ink: #ECEFED; --muted: #8E9892;
+  --line: #2A2E2C; --chip: #232725; --accent: #8496FF; --on-accent: #0E1230;
+  --sold: rgba(17, 19, 18, .78); color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 40px;
+  -webkit-tap-highlight-color: transparent;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--bg);
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+
+/* 상단 바 */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+  background: var(--bg); padding-block: 14px 10px;
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  padding-inline: max(16px, env(safe-area-inset-left, 0px));
+  border-bottom: 1px solid var(--line);
+}
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+h1 {
+  margin: 0; font-family: var(--display); font-weight: 800; font-stretch: 78%;
+  font-size: 26px; letter-spacing: -.01em; line-height: 1.1; text-wrap: balance;
+}
+.stamp { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.tabs { display: flex; gap: 18px; margin-top: 12px; }
+.tab {
+  appearance: none; border: 0; background: none; padding: 4px 0 6px; cursor: pointer;
+  font: 500 14px var(--body); color: var(--muted); border-bottom: 2px solid transparent;
+}
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 700; }
+.tab .n { font-variant-numeric: tabular-nums; margin-left: 4px; font-size: 12px; }
+
+.chips { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  appearance: none; flex: none; border: 0; cursor: pointer; border-radius: 999px;
+  background: var(--chip); color: var(--ink); font: 500 13px var(--body); padding: 7px 14px;
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+.tools { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer; user-select: none; }
+.toggle input { position: absolute; opacity: 0; pointer-events: none; }
+.sw { width: 34px; height: 20px; border-radius: 999px; background: var(--line); position: relative; transition: background .15s; }
+.sw::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px;
+  border-radius: 50%; background: var(--surface); transition: transform .15s;
+}
+.toggle input:checked + .sw { background: var(--accent); }
+.toggle input:checked + .sw::after { transform: translateX(14px); }
+.toggle input:focus-visible + .sw, .tab:focus-visible, .chip:focus-visible, select:focus-visible,
+.heart:focus-visible, .card a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+select {
+  font: 500 13px var(--body); color: var(--ink); background: var(--chip); border: 0;
+  border-radius: 999px; padding: 7px 12px;
+}
+
+/* 카드 피드 */
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; margin-top: 16px; }
+@media (min-width: 560px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.card { position: relative; min-width: 0; }
+.card a { color: inherit; text-decoration: none; display: block; }
+.ph {
+  position: relative; aspect-ratio: 3 / 4; max-width: 100%; overflow: hidden;
+  background: var(--chip); border-radius: 4px;
+}
+.ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge {
+  position: absolute; left: 8px; top: 8px; background: var(--accent); color: var(--on-accent);
+  font: 800 11px var(--display); font-stretch: 85%; letter-spacing: .06em; padding: 4px 7px; border-radius: 3px;
+}
+.sold {
+  position: absolute; inset: 0; background: var(--sold); display: grid; place-items: center;
+  font: 700 12px var(--display); letter-spacing: .12em; color: var(--ink);
+}
+.heart {
+  position: absolute; right: 6px; top: 6px; width: 36px; height: 36px; border: 0; cursor: pointer;
+  background: none; display: grid; place-items: center; z-index: 2;
+}
+.heart svg { width: 22px; height: 22px; stroke: #fff; stroke-width: 1.8; fill: rgba(0,0,0,.28); filter: drop-shadow(0 0 1px rgba(0,0,0,.5)); }
+.heart[aria-pressed="true"] svg { fill: var(--accent); stroke: var(--accent); filter: none; }
+.meta { padding-top: 9px; }
+.shop { font: 700 11px var(--display); font-stretch: 85%; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+.name {
+  font-size: 13px; line-height: 1.4; margin-top: 3px; overflow-wrap: anywhere;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.price { font: 700 15px var(--display); font-variant-numeric: tabular-nums; margin-top: 4px; }
+.price small { font: 500 12px var(--body); margin-left: 1px; }
+.price .was { font: 400 11px var(--body); color: var(--muted); margin-left: 6px; }
+
+.empty { margin: 56px 0; text-align: center; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.empty b { display: block; color: var(--ink); font-size: 16px; margin-bottom: 4px; }
+.foot { margin-top: 32px; font-size: 11px; color: var(--muted); line-height: 1.6; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <div class="top">
+      <h1>자사몰 모아보기</h1>
+      <span class="stamp" id="stamp"></span>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tab-all" aria-selected="true">전체<span class="n" id="n-all"></span></button>
+      <button class="tab" role="tab" id="tab-fav" aria-selected="false">찜<span class="n" id="n-fav"></span></button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="tools">
+      <label class="toggle"><input type="checkbox" id="only-new"><span class="sw"></span>신상만</label>
+      <select id="sort" aria-label="정렬">
+        <option value="latest">최신순</option>
+        <option value="low">낮은 가격순</option>
+        <option value="high">높은 가격순</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden></div>
+    <p class="foot">상품 정보는 각 몰의 목록 페이지에서 수집한 사본이에요. 가격과 재고는 카드를 눌러 몰에서 확인하세요.</p>
+  </main>
+</div>
+
+<script>
+const INLINE = __DATA__; // 단일 파일로 만들 때만 데이터가 들어가고, 사이트에서는 null 이라 products.json 을 불러온다
+let DATA = [];
+let COLLECTED = "";
+const NEW_DAYS = 3;
+
+const state = { tab: "all", shop: "all", onlyNew: false, sort: "latest", favs: new Set() };
+const $ = (id) => document.getElementById(id);
+
+try {
+  const raw = localStorage.getItem("shopfeed-favs");
+  if (raw) state.favs = new Set(JSON.parse(raw));
+} catch (e) {}
+function saveFavs() {
+  try { localStorage.setItem("shopfeed-favs", JSON.stringify([...state.favs])); } catch (e) {}
+}
+
+const key = (p) => p.shop_id + ":" + p.product_no;
+const won = (n) => n.toLocaleString("ko-KR");
+
+// 몰마다 최신순으로 들어온 순서를 지키면서 몰끼리 번갈아 섞는다
+const rank = new Map();
+const perShop = {};
+function prepare() {
+  DATA.forEach((p) => { perShop[p.shop_id] = (perShop[p.shop_id] || 0); rank.set(key(p), perShop[p.shop_id]++); });
+  shops = [...new Map(DATA.map((p) => [p.shop_id, p.shop_name])).entries()];
+}
+
+let shops = [];
+
+function renderChips() {
+  const box = $("chips");
+  box.innerHTML = "";
+  [["all", "전체 몰"], ...shops].forEach(([id, label]) => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = label;
+    b.setAttribute("aria-pressed", String(state.shop === id));
+    b.onclick = () => { state.shop = id; renderChips(); render(); };
+    box.appendChild(b);
+  });
+}
+
+function visible() {
+  let list = DATA.filter((p) => state.shop === "all" || p.shop_id === state.shop);
+  if (state.tab === "fav") list = list.filter((p) => state.favs.has(key(p)));
+  if (state.onlyNew) list = list.filter((p) => p.is_new);
+  const by = {
+    latest: (a, b) => rank.get(key(a)) - rank.get(key(b)) || a.shop_id.localeCompare(b.shop_id),
+    low: (a, b) => a.price - b.price,
+    high: (a, b) => b.price - a.price,
+  }[state.sort];
+  return list.sort(by);
+}
+
+const HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z" stroke-linejoin="round"/></svg>';
+
+function render() {
+  const list = visible();
+  const grid = $("grid");
+  grid.innerHTML = "";
+  list.forEach((p) => {
+    const k = key(p);
+    const card = document.createElement("article");
+    card.className = "card";
+    const faved = state.favs.has(k);
+    card.innerHTML =
+      '<a href="' + p.url + '" target="_blank" rel="noopener noreferrer">' +
+        '<div class="ph"><img loading="lazy" referrerpolicy="no-referrer" alt="" src="' + p.image + '">' +
+          (p.is_new ? '<span class="badge">NEW</span>' : "") +
+          (p.soldout ? '<div class="sold">SOLD OUT</div>' : "") +
+        "</div>" +
+        '<div class="meta"><div class="shop"></div><div class="name"></div>' +
+        '<div class="price">' + won(p.price) + "<small>원</small>" +
+          (p.original_price ? '<s class="was">' + won(p.original_price) + "원</s>" : "") + "</div></div>" +
+      "</a>" +
+      '<button class="heart" aria-label="찜" aria-pressed="' + faved + '">' + HEART + "</button>";
+    card.querySelector(".shop").textContent = p.shop_name;
+    card.querySelector(".name").textContent = p.name;
+    card.querySelector("img").alt = p.name;
+    card.querySelector(".heart").onclick = (e) => {
+      e.preventDefault();
+      state.favs.has(k) ? state.favs.delete(k) : state.favs.add(k);
+      saveFavs(); render();
+    };
+    grid.appendChild(card);
+  });
+
+  const empty = $("empty");
+  empty.hidden = list.length > 0;
+  if (!list.length) {
+    if (state.tab === "fav") empty.innerHTML = "<b>찜한 상품이 없어요</b>카드 모서리의 하트를 누르면 여기에 모여요.";
+    else if (state.onlyNew) empty.innerHTML = "<b>새로 올라온 상품이 아직 없어요</b>처음 본 지 " + NEW_DAYS + "일 안의 상품만 신상으로 보여요.";
+    else empty.innerHTML = "<b>보여줄 상품이 없어요</b>";
+  }
+  $("n-all").textContent = DATA.length;
+  $("n-fav").textContent = state.favs.size;
+}
+
+function selectTab(t) {
+  state.tab = t;
+  $("tab-all").setAttribute("aria-selected", String(t === "all"));
+  $("tab-fav").setAttribute("aria-selected", String(t === "fav"));
+  render();
+}
+$("tab-all").onclick = () => selectTab("all");
+$("tab-fav").onclick = () => selectTab("fav");
+$("only-new").onchange = (e) => { state.onlyNew = e.target.checked; render(); };
+$("sort").onchange = (e) => { state.sort = e.target.value; render(); };
+async function boot() {
+  try {
+    if (INLINE) {
+      DATA = INLINE.products; COLLECTED = INLINE.collected;
+    } else {
+      const res = await fetch("products.json?v=" + Date.now(), { cache: "no-store" });
+      const json = await res.json();
+      DATA = json.products; COLLECTED = json.collected;
+    }
+  } catch (e) {
+    const empty = $("empty");
+    empty.hidden = false;
+    empty.innerHTML = "<b>상품 데이터를 불러오지 못했어요</b>잠시 뒤 다시 열어 주세요.";
+    return;
+  }
+  prepare();
+  const d = COLLECTED.split("-");
+  $("stamp").textContent = d.length === 3 ? d[1] + "." + d[2] + " 수집" : COLLECTED;
+  renderChips();
+  render();
+}
+boot();
+</script>
