@@ -1,5 +1,5 @@
 {
- "collected": "2026-10-29",
+ "collected": "2026-10-30",
  "products": [
   {
    "shop_id": "archiveryu",
@@ -50,7 +50,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1351",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "하의"
   },
   {
@@ -63,7 +63,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1350",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "잡화"
   },
   {
@@ -76,7 +76,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1349",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "상의"
   },
   {
@@ -89,7 +89,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1348",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "니트·가디건"
   },
   {
@@ -102,7 +102,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1347",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "기타"
   },
   {
@@ -115,7 +115,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1346",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "아우터"
   },
   {
@@ -128,7 +128,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1345",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "상의"
   },
   {
@@ -141,7 +141,7 @@
    "url": "https://archiveryu.com/product/detail.html?product_no=1344",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "아우터"
   },
   {
@@ -3176,6 +3176,34 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
+   "product_no": 4698,
+   "name": "레이첼 겨울 기모 코듀로이 플레어 팬츠 (블랙)",
+   "price": 49200,
+   "original_price": 51780,
+   "image": "https://thoughts.ai.kr/web/product/big/202610/0e5038ad526d40303fcc7536e78123bc.jpg",
+   "url": "https://thoughts.ai.kr/product/레이첼-겨울-기모-코듀로이-플레어-팬츠-블랙/4698/category/125/display/1/",
+   "soldout": false,
+   "first_seen": "2026-10-30",
+   "is_new": true,
+   "category": "하의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4696,
+   "name": "프란츠 ESSAY 실켓 크롭 스웻셔츠 (그린)",
+   "price": 45700,
+   "original_price": 48100,
+   "image": "https://thoughts.ai.kr/web/product/big/202610/610a4a169b3221929b15aa0bbfb007e9.jpg",
+   "url": "https://thoughts.ai.kr/product/프란츠-essay-실켓-크롭-스웻셔츠-그린/4696/category/125/display/1/",
+   "soldout": false,
+   "first_seen": "2026-10-30",
+   "is_new": true,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
    "product_no": 4695,
    "name": "애덤스 HARU 기모 데님 팬츠 (그레이시 다크블루)",
    "price": 47200,
@@ -3204,20 +3232,6 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4693,
-   "name": "루체 ESSAY 아플리케 스웻셔츠 (네이비)",
-   "price": 52300,
-   "original_price": 55050,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/efced1a3b822241ce1f117db2ada5500.jpg",
-   "url": "https://thoughts.ai.kr/product/루체-essay-아플리케-스웻셔츠-네이비/4693/category/125/display/1/",
-   "soldout": false,
-   "first_seen": "2026-10-28",
-   "is_new": true,
-   "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4691,
    "name": "해리 소프트-터치 리브드 티셔츠 (카키 브라운)",
    "price": 19200,
@@ -3240,7 +3254,7 @@
    "url": "https://thoughts.ai.kr/product/에디나-비건-스웨이드-세미-크롭-자켓-다크-브라운/4690/category/125/display/1/",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "아우터"
   },
   {
@@ -3254,7 +3268,7 @@
    "url": "https://thoughts.ai.kr/product/라리사-even-카프리-코튼-부츠컷-팬츠-블랙/4689/category/125/display/1/",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "하의"
   },
   {
@@ -3268,7 +3282,7 @@
    "url": "https://thoughts.ai.kr/product/오르테-mute-커브드-코튼-팬츠-아이보리/4687/category/125/display/1/",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "하의"
   },
   {
@@ -3282,7 +3296,7 @@
    "url": "https://thoughts.ai.kr/product/브라이튼-옥스포드-포켓-오버사이즈-셔츠-블랙/4686/category/125/display/1/",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "상의"
   },
   {
@@ -3404,7 +3418,7 @@
    "name": "밀라 SENT 캐시미어-핸드메이드 슬림 핏 코트 (브라운)",
    "price": 297000,
    "original_price": 330000,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/e59d0c90f70d0f60e9a038caf6abaa46.jpg",
+   "image": "https://thoughts.ai.kr/web/product/big/202610/49c6adc50bf1810e059a6dc77fbb6416.jpg",
    "url": "https://thoughts.ai.kr/product/밀라-sent-캐시미어-핸드메이드-슬림-핏-코트-브라운/4670/category/125/display/1/",
    "soldout": false,
    "first_seen": null,
@@ -3418,7 +3432,7 @@
    "name": "브뤼헤 SENT 캐시미어-핸드메이드 하이넥 코트 (멜란지 차콜)",
    "price": 327600,
    "original_price": 364000,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/8db65f73735b2f846f39d419338a3fd4.jpg",
+   "image": "https://thoughts.ai.kr/web/product/big/202610/f6832b6a97e25d792d69cea07de5ed8a.jpg",
    "url": "https://thoughts.ai.kr/product/브뤼헤-sent-캐시미어-핸드메이드-하이넥-코트-멜란지-차콜/4669/category/125/display/1/",
    "soldout": false,
    "first_seen": null,
@@ -3652,6 +3666,20 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
+   "product_no": 4640,
+   "name": "브뤼헤 SENT 캐시미어-핸드메이드 하이넥 코트 (블랙)",
+   "price": 327600,
+   "original_price": 364000,
+   "image": "https://thoughts.ai.kr/web/product/big/202610/e1fa03fc7b140b5c0341984d4d910d67.jpg",
+   "url": "https://thoughts.ai.kr/product/브뤼헤-sent-캐시미어-핸드메이드-하이넥-코트-블랙/4640/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "아우터"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
    "product_no": 4637,
    "name": "아브니르 빅카라 포켓 셔츠 블라우스 (차콜)",
    "price": 49200,
@@ -3662,6 +3690,20 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4636,
+   "name": "노엘 R 메리노울 스탠다드 니트 (차콜)",
+   "price": 46900,
+   "original_price": 49360,
+   "image": "https://thoughts.ai.kr/web/product/big/202610/4c081c49a89f7b93e4a72f49d3874fdf.jpg",
+   "url": "https://thoughts.ai.kr/product/노엘-r-메리노울-스탠다드-니트-차콜/4636/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -3708,16 +3750,16 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4626,
-   "name": "엘로이 스카프 타이 롱 슬리브 탑 (차콜)",
-   "price": 29700,
-   "original_price": 31260,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/47aec07f69b743de7b4821ff1cbff7c3.jpg",
-   "url": "https://thoughts.ai.kr/product/엘로이-스카프-타이-롱-슬리브-탑-차콜/4626/category/125/display/1/",
+   "product_no": 4627,
+   "name": "밀라 SENT 캐시미어-핸드메이드 슬림 핏 코트 (블랙)",
+   "price": 297000,
+   "original_price": 330000,
+   "image": "https://thoughts.ai.kr/web/product/big/202609/80db5b57d4041a0df19373e912962a25.jpg",
+   "url": "https://thoughts.ai.kr/product/밀라-sent-캐시미어-핸드메이드-슬림-핏-코트-블랙/4627/category/125/display/1/",
    "soldout": false,
    "first_seen": null,
    "is_new": false,
-   "category": "상의"
+   "category": "아우터"
   },
   {
    "shop_id": "thoughts",
@@ -3750,12 +3792,12 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4620,
-   "name": "엘링턴 V 캐시미어 투웨이 가디건 (모카 브라운)",
+   "product_no": 4621,
+   "name": "엘링턴 V 캐시미어 투웨이 가디건 (딥 차콜)",
    "price": 53700,
    "original_price": 56520,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/797c89f0bfc3fab7f2946429159228b2.jpg",
-   "url": "https://thoughts.ai.kr/product/엘링턴-v-캐시미어-투웨이-가디건-모카-브라운/4620/category/125/display/1/",
+   "image": "https://thoughts.ai.kr/web/product/big/202609/d8fb4176d28a2d2a3532c44cb1499ddb.jpg",
+   "url": "https://thoughts.ai.kr/product/엘링턴-v-캐시미어-투웨이-가디건-딥-차콜/4621/category/125/display/1/",
    "soldout": false,
    "first_seen": null,
    "is_new": false,
@@ -3802,6 +3844,20 @@
    "first_seen": null,
    "is_new": false,
    "category": "아우터"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4616,
+   "name": "노엘 R 메리노울 스탠다드 니트 (솔티 크림)",
+   "price": 46900,
+   "original_price": 49360,
+   "image": "https://thoughts.ai.kr/web/product/big/202609/ff5adf95a3a9eef2a8a97d203cb4d565.jpg",
+   "url": "https://thoughts.ai.kr/product/노엘-r-메리노울-스탠다드-니트-솔티-크림/4616/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -4086,20 +4142,6 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4585,
-   "name": "도브 에어리-터치 골지 슬림 가디건 (크림 베이지)",
-   "price": 49700,
-   "original_price": 52310,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/1356769e67207ff1a7bb0f1536a16723.jpg",
-   "url": "https://thoughts.ai.kr/product/도브-에어리-터치-골지-슬림-가디건-크림-베이지/4585/category/125/display/1/",
-   "soldout": false,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4584,
    "name": "하와 루즈핏 포켓 셔츠 블라우스 (다크 브라운)",
    "price": 49200,
@@ -4380,6 +4422,20 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
+   "product_no": 4557,
+   "name": "오브 파인울 새들 루즈 핏 니트 (베이지)",
+   "price": 43700,
+   "original_price": 46000,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/bfe2593373246b12252c06d3bdef21fe.jpg",
+   "url": "https://thoughts.ai.kr/product/오브-파인울-새들-루즈-핏-니트-베이지/4557/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
    "product_no": 4556,
    "name": "로웰 알파카 케이블 니트 (미스티 민트)",
    "price": 59200,
@@ -4456,6 +4512,34 @@
    "original_price": 46000,
    "image": "https://thoughts.ai.kr/web/product/big/202608/a206ffe2062e343e13b1da5b4cc7af80.jpg",
    "url": "https://thoughts.ai.kr/product/아델린-텐셀-빅카라-블라우스-페일-피치/4549/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4548,
+   "name": "아델린 텐셀 빅카라 블라우스 (포그 블루그레이)",
+   "price": 43700,
+   "original_price": 46000,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/f1581414b2983b63d0d4f0a3673e1636.jpg",
+   "url": "https://thoughts.ai.kr/product/아델린-텐셀-빅카라-블라우스-포그-블루그레이/4548/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4547,
+   "name": "아델린 텐셀 빅카라 블라우스 (딥 차콜)",
+   "price": 43700,
+   "original_price": 46000,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/d981bf9941dea3e9248c0324661142bd.jpg",
+   "url": "https://thoughts.ai.kr/product/아델린-텐셀-빅카라-블라우스-딥-차콜/4547/category/125/display/1/",
    "soldout": false,
    "first_seen": null,
    "is_new": false,
@@ -4576,6 +4660,48 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
+   "product_no": 4534,
+   "name": "오브 파인울 새들 루즈 핏 니트 (오션 블루)",
+   "price": 43700,
+   "original_price": 46000,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/9749b3f215c7c0ff1bedb46fe8bbd3bd.jpg",
+   "url": "https://thoughts.ai.kr/product/오브-파인울-새들-루즈-핏-니트-오션-블루/4534/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4532,
+   "name": "코데 R 텐셀 시스루 티셔츠 (멜란지 그레이)",
+   "price": 19800,
+   "original_price": 20840,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/af6f20c800329a16b08e698785c40985.jpg",
+   "url": "https://thoughts.ai.kr/product/코데-r-텐셀-시스루-티셔츠-멜란지-그레이/4532/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4531,
+   "name": "예가체프 R 파인울 가디건 (문빔 그레이), (free)",
+   "price": 43700,
+   "original_price": 46000,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/8d4928a0ef20fbc3f109ac8a82e6fb41.jpg",
+   "url": "https://thoughts.ai.kr/product/예가체프-r-파인울-가디건-문빔-그레이-free/4531/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
    "product_no": 4529,
    "name": "예가체프 R 파인울 가디건 (아쿠아 블루), (free)",
    "price": 43700,
@@ -4642,20 +4768,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "하의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4522,
-   "name": "리지 V 메리노울 니트 풀오버 (코튼 핑크)",
-   "price": 42700,
-   "original_price": 44940,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/56b7c73473b61e9e0f1f81bdf281c58f.jpg",
-   "url": "https://thoughts.ai.kr/product/리지-v-메리노울-니트-풀오버-코튼-핑크/4522/category/125/display/1/",
-   "soldout": false,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -4950,20 +5062,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4489,
-   "name": "소피아 램스울 스트링 가디건 (토프 베이지)",
-   "price": 49200,
-   "original_price": 51780,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/3d41cac3ef47aae5551b8a3893abce30.jpg",
-   "url": "https://thoughts.ai.kr/product/소피아-램스울-스트링-가디건-토프-베이지/4489/category/125/display/1/",
-   "soldout": false,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -5570,20 +5668,6 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4144,
-   "name": "안치오 스크런치 스트랩 블라우스 (크림 아이보리)",
-   "price": 49700,
-   "original_price": 52310,
-   "image": "https://thoughts.ai.kr/web/product/big/202602/a52316ea72c59edf1fa540ef9c20d6d0.jpg",
-   "url": "https://thoughts.ai.kr/product/안치오-스크런치-스트랩-블라우스-크림-아이보리/4144/category/125/display/1/",
-   "soldout": false,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4141,
    "name": "셀레네 슬릿 맥시 스커트 (블랙)",
    "price": 35900,
@@ -5766,6 +5850,20 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
+   "product_no": 4060,
+   "name": "렌토 V 타이 블라우스 (블랙), (free)",
+   "price": 49700,
+   "original_price": 52310,
+   "image": "https://thoughts.ai.kr/web/product/big/202601/998c6e2434b5df0d69910c5fb788c945.jpg",
+   "url": "https://thoughts.ai.kr/product/렌토-v-타이-블라우스-블랙-free/4060/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
    "product_no": 4057,
    "name": "에머리 스트라이프 셔츠 블라우스 (네이비)",
    "price": 49700,
@@ -5860,20 +5958,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4026,
-   "name": "베른 패턴 하프 트렌치 코트 (네이비), (free)",
-   "price": 137000,
-   "original_price": 144210,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/574077883cc02ce748ce668b68b00ccd.jpg",
-   "url": "https://thoughts.ai.kr/product/베른-패턴-하프-트렌치-코트-네이비-free/4026/category/125/display/1/",
-   "soldout": false,
-   "first_seen": null,
-   "is_new": false,
-   "category": "아우터"
   },
   {
    "shop_id": "thoughts",
@@ -6046,6 +6130,20 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
+   "product_no": 3866,
+   "name": "루센 차이나 카라 피치 기모 셔츠 (아이보리), (free)",
+   "price": 39700,
+   "original_price": 41780,
+   "image": "https://thoughts.ai.kr/web/product/big/202511/ed11183dfafa03f9afb429375b26b444.jpg",
+   "url": "https://thoughts.ai.kr/product/루센-차이나-카라-피치-기모-셔츠-아이보리-free/3866/category/125/display/1/",
+   "soldout": false,
+   "first_seen": "2026-10-30",
+   "is_new": true,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
    "product_no": 3864,
    "name": "웨일즈 밍크 하이넥 니트 베스트 (우드 그레이), (free)",
    "price": 54700,
@@ -6056,6 +6154,62 @@
    "first_seen": null,
    "is_new": false,
    "category": "니트·가디건"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 3863,
+   "name": "루센 차이나 카라 피치 기모 셔츠 (크림 베이지), (free)",
+   "price": 39700,
+   "original_price": 41780,
+   "image": "https://thoughts.ai.kr/web/product/big/202511/b46c48d1713aae5760534077d39ff861.jpg",
+   "url": "https://thoughts.ai.kr/product/루센-차이나-카라-피치-기모-셔츠-크림-베이지-free/3863/category/125/display/1/",
+   "soldout": false,
+   "first_seen": "2026-10-30",
+   "is_new": true,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 3848,
+   "name": "루브르 겨울 하객룩 타이 블라우스 (아이보리), (free)",
+   "price": 47500,
+   "original_price": 50000,
+   "image": "https://thoughts.ai.kr/web/product/big/202511/5292a6de7c37ce8a18a04450d6d1a0b2.jpg",
+   "url": "https://thoughts.ai.kr/product/루브르-겨울-하객룩-타이-블라우스-아이보리-free/3848/category/125/display/1/",
+   "soldout": false,
+   "first_seen": "2026-10-30",
+   "is_new": true,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 3847,
+   "name": "루브르 겨울 하객룩 타이 블라우스 (블랙), (free)",
+   "price": 47500,
+   "original_price": 50000,
+   "image": "https://thoughts.ai.kr/web/product/big/202510/c9a3ca3e0f5522860c24dcd96ff39130.jpg",
+   "url": "https://thoughts.ai.kr/product/루브르-겨울-하객룩-타이-블라우스-블랙-free/3847/category/125/display/1/",
+   "soldout": false,
+   "first_seen": "2026-10-30",
+   "is_new": true,
+   "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 3846,
+   "name": "루브르 겨울 하객룩 타이 블라우스 (브라운), (free)",
+   "price": 47500,
+   "original_price": 50000,
+   "image": "https://thoughts.ai.kr/web/product/big/202510/eb3ea709931681b8a3a867f6ed777c2b.jpg",
+   "url": "https://thoughts.ai.kr/product/루브르-겨울-하객룩-타이-블라우스-브라운-free/3846/category/125/display/1/",
+   "soldout": false,
+   "first_seen": "2026-10-30",
+   "is_new": true,
+   "category": "상의"
   },
   {
    "shop_id": "thoughts",
@@ -6096,7 +6250,7 @@
    "url": "https://thoughts.ai.kr/product/체르나-스트라이프-맥시-울-스커트-차콜/3821/category/125/display/1/",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "하의"
   },
   {
@@ -6138,7 +6292,7 @@
    "url": "https://thoughts.ai.kr/product/알레트-겨울-기모-헤링본-맥시-스커트-블랙/3808/category/125/display/1/",
    "soldout": false,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "하의"
   },
   {
@@ -6266,20 +6420,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 3710,
-   "name": "시나몬 울 텐셀 카울넥 블라우스 (골드 베이지), (free)",
-   "price": 39700,
-   "original_price": 41780,
-   "image": "https://thoughts.ai.kr/web/product/big/202512/8410c5a681032fcea34730de44c96f3e.jpg",
-   "url": "https://thoughts.ai.kr/product/시나몬-울-텐셀-카울넥-블라우스-골드-베이지-free/3710/category/125/display/1/",
-   "soldout": false,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
   },
   {
    "shop_id": "thoughts",
@@ -6672,6 +6812,20 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 3624,
+   "name": "레보 1.5cm 소가죽 골드 슬림벨트",
+   "price": 21600,
+   "original_price": 22730,
+   "image": "https://thoughts.ai.kr/web/product/big/202509/7996cd9a1c4bb07a9b72e3cf554854e6.jpg",
+   "url": "https://thoughts.ai.kr/product/레보-15cm-소가죽-골드-슬림벨트/3624/category/125/display/1/",
+   "soldout": false,
+   "first_seen": null,
+   "is_new": false,
+   "category": "잡화"
   },
   {
    "shop_id": "thoughts",
@@ -7334,44 +7488,16 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4012,
-   "name": "이레네 V 트위드 자켓 (딥 네이비), (free)",
-   "price": 107200,
-   "original_price": 112840,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/b5bfd0cf75a618278f84e15667cc9a95.jpg",
-   "url": "https://thoughts.ai.kr/product/이레네-v-트위드-자켓-딥-네이비-free/4012/category/125/display/1/",
+   "product_no": 4697,
+   "name": "아놀드 R 스탠다드 케이블 니트 (딥 차콜)",
+   "price": 43700,
+   "original_price": 46000,
+   "image": "https://thoughts.ai.kr/web/product/big/202610/e250d5a4458414c2e75c43f6382bc10e.jpg",
+   "url": "https://thoughts.ai.kr/product/아놀드-r-스탠다드-케이블-니트-딥-차콜/4697/category/125/display/1/",
    "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "아우터"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4011,
-   "name": "이레네 V 트위드 자켓 (아이보리), (free)",
-   "price": 107200,
-   "original_price": 112840,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/0395c3277b6a2ea3cb3812f9d7acf8e3.jpg",
-   "url": "https://thoughts.ai.kr/product/이레네-v-트위드-자켓-아이보리-free/4011/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "아우터"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4692,
-   "name": "루체 ESSAY 아플리케 스웻셔츠 (블랙)",
-   "price": 52300,
-   "original_price": 55050,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/1239a19b40dfaa2f514fa445d952fcce.jpg",
-   "url": "https://thoughts.ai.kr/product/루체-essay-아플리케-스웻셔츠-블랙/4692/category/125/display/1/",
-   "soldout": true,
-   "first_seen": "2026-10-28",
+   "first_seen": "2026-10-30",
    "is_new": true,
-   "category": "상의"
+   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -7384,7 +7510,7 @@
    "url": "https://thoughts.ai.kr/product/해리-소프트-터치-리브드-티셔츠-멜란지-차콜/4688/category/125/display/1/",
    "soldout": true,
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "category": "상의"
   },
   {
@@ -7404,34 +7530,6 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4683,
-   "name": "다이튼 라이닝-포인트 하프 트렌치 코트 (매트 카키)",
-   "price": 109000,
-   "original_price": 114730,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/42525abd3482796572195691cc29ed0c.jpg",
-   "url": "https://thoughts.ai.kr/product/다이튼-라이닝-포인트-하프-트렌치-코트-매트-카키/4683/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "아우터"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4682,
-   "name": "다이튼 라이닝-포인트 하프 트렌치 코트 (코코아 브라운)",
-   "price": 109000,
-   "original_price": 114730,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/0798ba88f5d37002b219dd3ce4484902.jpg",
-   "url": "https://thoughts.ai.kr/product/다이튼-라이닝-포인트-하프-트렌치-코트-코코아-브라운/4682/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "아우터"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4680,
    "name": "해리스 야크 모크넥 니트 풀오버 (엔틱 블루)",
    "price": 59400,
@@ -7442,20 +7540,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4679,
-   "name": "에르노 ESSAY V넥 스웻셔츠 (딥 브라운)",
-   "price": 45700,
-   "original_price": 48100,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/337a113d2e3972b7e11bad1287e24b74.jpg",
-   "url": "https://thoughts.ai.kr/product/에르노-essay-v넥-스웻셔츠-딥-브라운/4679/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
   },
   {
    "shop_id": "thoughts",
@@ -7642,20 +7726,6 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4640,
-   "name": "브뤼헤 SENT 캐시미어-핸드메이드 하이넥 코트 (블랙)",
-   "price": 327600,
-   "original_price": 364000,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/e1fa03fc7b140b5c0341984d4d910d67.jpg",
-   "url": "https://thoughts.ai.kr/product/브뤼헤-sent-캐시미어-핸드메이드-하이넥-코트-블랙/4640/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "아우터"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4639,
    "name": "에밀리 HARU 데님 팬츠 (그레이시 블루)",
    "price": 44700,
@@ -7680,20 +7750,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4636,
-   "name": "노엘 R 메리노울 스탠다드 니트 (차콜)",
-   "price": 46900,
-   "original_price": 49360,
-   "image": "https://thoughts.ai.kr/web/product/big/202610/4c081c49a89f7b93e4a72f49d3874fdf.jpg",
-   "url": "https://thoughts.ai.kr/product/노엘-r-메리노울-스탠다드-니트-차콜/4636/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -7768,16 +7824,16 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4627,
-   "name": "밀라 SENT 캐시미어-핸드메이드 슬림 핏 코트 (블랙)",
-   "price": 297000,
-   "original_price": 330000,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/80db5b57d4041a0df19373e912962a25.jpg",
-   "url": "https://thoughts.ai.kr/product/밀라-sent-캐시미어-핸드메이드-슬림-핏-코트-블랙/4627/category/125/display/1/",
+   "product_no": 4626,
+   "name": "엘로이 스카프 타이 롱 슬리브 탑 (차콜)",
+   "price": 29700,
+   "original_price": 31260,
+   "image": "https://thoughts.ai.kr/web/product/big/202609/47aec07f69b743de7b4821ff1cbff7c3.jpg",
+   "url": "https://thoughts.ai.kr/product/엘로이-스카프-타이-롱-슬리브-탑-차콜/4626/category/125/display/1/",
    "soldout": true,
    "first_seen": null,
    "is_new": false,
-   "category": "아우터"
+   "category": "상의"
   },
   {
    "shop_id": "thoughts",
@@ -7796,44 +7852,16 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4621,
-   "name": "엘링턴 V 캐시미어 투웨이 가디건 (딥 차콜)",
+   "product_no": 4620,
+   "name": "엘링턴 V 캐시미어 투웨이 가디건 (모카 브라운)",
    "price": 53700,
    "original_price": 56520,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/d8fb4176d28a2d2a3532c44cb1499ddb.jpg",
-   "url": "https://thoughts.ai.kr/product/엘링턴-v-캐시미어-투웨이-가디건-딥-차콜/4621/category/125/display/1/",
+   "image": "https://thoughts.ai.kr/web/product/big/202609/797c89f0bfc3fab7f2946429159228b2.jpg",
+   "url": "https://thoughts.ai.kr/product/엘링턴-v-캐시미어-투웨이-가디건-모카-브라운/4620/category/125/display/1/",
    "soldout": true,
    "first_seen": null,
    "is_new": false,
    "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4616,
-   "name": "노엘 R 메리노울 스탠다드 니트 (솔티 크림)",
-   "price": 46900,
-   "original_price": 49360,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/ff5adf95a3a9eef2a8a97d203cb4d565.jpg",
-   "url": "https://thoughts.ai.kr/product/노엘-r-메리노울-스탠다드-니트-솔티-크림/4616/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4612,
-   "name": "에건 스탠다드 스트라이프 셔츠 (블랙)",
-   "price": 43700,
-   "original_price": 46000,
-   "image": "https://thoughts.ai.kr/web/product/big/202609/370d9a15668a26a64614fe32ba64c46a.jpg",
-   "url": "https://thoughts.ai.kr/product/에건-스탠다드-스트라이프-셔츠-블랙/4612/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
   },
   {
    "shop_id": "thoughts",
@@ -7950,6 +7978,20 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
+   "product_no": 4585,
+   "name": "도브 에어리-터치 골지 슬림 가디건 (크림 베이지)",
+   "price": 49700,
+   "original_price": 52310,
+   "image": "https://thoughts.ai.kr/web/product/big/202609/1356769e67207ff1a7bb0f1536a16723.jpg",
+   "url": "https://thoughts.ai.kr/product/도브-에어리-터치-골지-슬림-가디건-크림-베이지/4585/category/125/display/1/",
+   "soldout": true,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
    "product_no": 4579,
    "name": "에블린 플리츠 롱 스커트 (딥 네이비)",
    "price": 49200,
@@ -8034,20 +8076,6 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4557,
-   "name": "오브 파인울 새들 루즈 핏 니트 (베이지)",
-   "price": 43700,
-   "original_price": 46000,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/bfe2593373246b12252c06d3bdef21fe.jpg",
-   "url": "https://thoughts.ai.kr/product/오브-파인울-새들-루즈-핏-니트-베이지/4557/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4553,
    "name": "아리아 V 모헤어 스트랩 가디건 (그레이)",
    "price": 49700,
@@ -8068,34 +8096,6 @@
    "original_price": 20840,
    "image": "https://thoughts.ai.kr/web/product/big/202608/6ed57bc57f1228ec3f6cb5f8d13cde03.jpg",
    "url": "https://thoughts.ai.kr/product/코데-r-텐셀-시스루-티셔츠-블랙/4550/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4548,
-   "name": "아델린 텐셀 빅카라 블라우스 (포그 블루그레이)",
-   "price": 43700,
-   "original_price": 46000,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/f1581414b2983b63d0d4f0a3673e1636.jpg",
-   "url": "https://thoughts.ai.kr/product/아델린-텐셀-빅카라-블라우스-포그-블루그레이/4548/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4547,
-   "name": "아델린 텐셀 빅카라 블라우스 (딥 차콜)",
-   "price": 43700,
-   "original_price": 46000,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/d981bf9941dea3e9248c0324661142bd.jpg",
-   "url": "https://thoughts.ai.kr/product/아델린-텐셀-빅카라-블라우스-딥-차콜/4547/category/125/display/1/",
    "soldout": true,
    "first_seen": null,
    "is_new": false,
@@ -8132,54 +8132,12 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4534,
-   "name": "오브 파인울 새들 루즈 핏 니트 (오션 블루)",
-   "price": 43700,
-   "original_price": 46000,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/9749b3f215c7c0ff1bedb46fe8bbd3bd.jpg",
-   "url": "https://thoughts.ai.kr/product/오브-파인울-새들-루즈-핏-니트-오션-블루/4534/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4533,
    "name": "소피아 램스울 스트링 가디건 (멜란지 그레이)",
    "price": 49200,
    "original_price": 51780,
    "image": "https://thoughts.ai.kr/web/product/big/202608/c9efc05ae817ce4cbfd26976d4959263.jpg",
    "url": "https://thoughts.ai.kr/product/소피아-램스울-스트링-가디건-멜란지-그레이/4533/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "니트·가디건"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4532,
-   "name": "코데 R 텐셀 시스루 티셔츠 (멜란지 그레이)",
-   "price": 19800,
-   "original_price": 20840,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/af6f20c800329a16b08e698785c40985.jpg",
-   "url": "https://thoughts.ai.kr/product/코데-r-텐셀-시스루-티셔츠-멜란지-그레이/4532/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4531,
-   "name": "예가체프 R 파인울 가디건 (문빔 그레이), (free)",
-   "price": 43700,
-   "original_price": 46000,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/8d4928a0ef20fbc3f109ac8a82e6fb41.jpg",
-   "url": "https://thoughts.ai.kr/product/예가체프-r-파인울-가디건-문빔-그레이-free/4531/category/125/display/1/",
    "soldout": true,
    "first_seen": null,
    "is_new": false,
@@ -8212,6 +8170,20 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4522,
+   "name": "리지 V 메리노울 니트 풀오버 (코튼 핑크)",
+   "price": 42700,
+   "original_price": 44940,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/56b7c73473b61e9e0f1f81bdf281c58f.jpg",
+   "url": "https://thoughts.ai.kr/product/리지-v-메리노울-니트-풀오버-코튼-핑크/4522/category/125/display/1/",
+   "soldout": true,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -8324,6 +8296,20 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 4489,
+   "name": "소피아 램스울 스트링 가디건 (토프 베이지)",
+   "price": 49200,
+   "original_price": 51780,
+   "image": "https://thoughts.ai.kr/web/product/big/202608/3d41cac3ef47aae5551b8a3893abce30.jpg",
+   "url": "https://thoughts.ai.kr/product/소피아-램스울-스트링-가디건-토프-베이지/4489/category/125/display/1/",
+   "soldout": true,
+   "first_seen": null,
+   "is_new": false,
+   "category": "니트·가디건"
   },
   {
    "shop_id": "thoughts",
@@ -8580,20 +8566,6 @@
   {
    "shop_id": "thoughts",
    "shop_name": "사색",
-   "product_no": 4060,
-   "name": "렌토 V 타이 블라우스 (블랙), (free)",
-   "price": 49700,
-   "original_price": 52310,
-   "image": "https://thoughts.ai.kr/web/product/big/202601/998c6e2434b5df0d69910c5fb788c945.jpg",
-   "url": "https://thoughts.ai.kr/product/렌토-v-타이-블라우스-블랙-free/4060/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
    "product_no": 4055,
    "name": "우드 스탠다드 20수 보트넥 티셔츠 (아이보리)",
    "price": 19800,
@@ -8604,20 +8576,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 4027,
-   "name": "베른 패턴 하프 트렌치 코트 (베이지), (free)",
-   "price": 137000,
-   "original_price": 144210,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/0974f5d2629a78223125ea755b707d77.jpg",
-   "url": "https://thoughts.ai.kr/product/베른-패턴-하프-트렌치-코트-베이지-free/4027/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "아우터"
   },
   {
    "shop_id": "thoughts",
@@ -8682,7 +8640,7 @@
    "name": "모데나 겨울 릴렉스드-와이드 트라우저 (딥 차콜)",
    "price": 49500,
    "original_price": 52100,
-   "image": "https://thoughts.ai.kr/web/product/big/202512/7fce21b373e2a96332801e54057e2d40.jpg",
+   "image": "https://thoughts.ai.kr/web/product/big/202610/a1ca1bcfb939bc5d49cccc2aa8a89eb3.jpg",
    "url": "https://thoughts.ai.kr/product/모데나-겨울-릴렉스드-와이드-트라우저-딥-차콜/3906/category/125/display/1/",
    "soldout": true,
    "first_seen": null,
@@ -8898,6 +8856,20 @@
    "first_seen": null,
    "is_new": false,
    "category": "니트·가디건"
+  },
+  {
+   "shop_id": "thoughts",
+   "shop_name": "사색",
+   "product_no": 3710,
+   "name": "시나몬 울 텐셀 카울넥 블라우스 (골드 베이지), (free)",
+   "price": 39700,
+   "original_price": 41780,
+   "image": "https://thoughts.ai.kr/web/product/big/202512/8410c5a681032fcea34730de44c96f3e.jpg",
+   "url": "https://thoughts.ai.kr/product/시나몬-울-텐셀-카울넥-블라우스-골드-베이지-free/3710/category/125/display/1/",
+   "soldout": true,
+   "first_seen": null,
+   "is_new": false,
+   "category": "상의"
   },
   {
    "shop_id": "thoughts",
@@ -9136,20 +9108,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "하의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 3624,
-   "name": "레보 1.5cm 소가죽 골드 슬림벨트",
-   "price": 21600,
-   "original_price": 22730,
-   "image": "https://thoughts.ai.kr/web/product/big/202509/7996cd9a1c4bb07a9b72e3cf554854e6.jpg",
-   "url": "https://thoughts.ai.kr/product/레보-15cm-소가죽-골드-슬림벨트/3624/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "잡화"
   },
   {
    "shop_id": "thoughts",
@@ -9402,20 +9360,6 @@
    "first_seen": null,
    "is_new": false,
    "category": "상의"
-  },
-  {
-   "shop_id": "thoughts",
-   "shop_name": "사색",
-   "product_no": 3506,
-   "name": "델마 부츠컷 코튼 팬츠 (블랙)",
-   "price": 39700,
-   "original_price": 41780,
-   "image": "https://thoughts.ai.kr/web/product/big/202608/4e92798d20aab52cd6987fe816d5ad4b.jpg",
-   "url": "https://thoughts.ai.kr/product/델마-부츠컷-코튼-팬츠-블랙/3506/category/125/display/1/",
-   "soldout": true,
-   "first_seen": null,
-   "is_new": false,
-   "category": "하의"
   },
   {
    "shop_id": "reove",
