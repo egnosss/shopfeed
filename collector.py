@@ -94,7 +94,46 @@ def parse_thoughts(html, shop):
     return items
 
 
-PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts}
+def parse_reove(html, shop):
+    """reove.kr 형식(카페24 스킨): 이름은 .name 안의 title 아닌 span, 가격은 li.product_price, 정가는 li.product_custom."""
+    soup = BeautifulSoup(html, "html.parser")
+    items = []
+    for li in soup.select("ul.prdList > li[id^=anchorBoxId_]"):
+        no = li["id"].replace("anchorBoxId_", "")
+
+        name_el = li.select_one(".description .name a")
+        img_el = li.select_one(".thumbnail img[id^=eListPrdImage]")
+        sale_el = li.select_one("li.product_price")
+        orig_el = li.select_one("li.product_custom")
+
+        def won(el):
+            m = re.search(r"([\d,]+)\s*원", el.get_text()) if el else None
+            return int(m.group(1).replace(",", "")) if m else 0
+
+        name = ""
+        if name_el:
+            for t in name_el.select(".title"):
+                t.decompose()
+            name = name_el.get_text(strip=True)
+        sale_price = won(sale_el)
+        original = won(orig_el)
+        soldout = bool(li.select_one(".soldout_icon img, img[alt*='품절']"))
+
+        items.append({
+            "shop_id": shop["id"],
+            "shop_name": shop["name"],
+            "product_no": int(no),
+            "name": name,
+            "price": sale_price or original,
+            "original_price": original if sale_price and original > sale_price else None,
+            "image": abs_url(shop["base_url"], img_el["src"]) if img_el else "",
+            "url": f"{shop['base_url']}/product/detail.html?product_no={no}",
+            "soldout": soldout,
+        })
+    return items
+
+
+PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts, "reove": parse_reove}
 
 
 MAX_PAGES_DEFAULT = 100  # 끝을 못 찾는 경우를 막는 안전장치. 몰이 끝 페이지를 주면 그 전에 멈춘다

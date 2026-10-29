@@ -14,5 +14,14 @@
     "list_paths": [
       "/product/list.html?cate_no=125"
     ]
+  },
+  {
+    "id": "reove",
+    "name": "리오브",
+    "parser": "reove",
+    "base_url": "https://reove.kr",
+    "list_paths": [
+      "/product/list.html?cate_no=82"
+    ]
   }
 ]
