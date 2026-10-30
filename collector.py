@@ -133,7 +133,41 @@ def parse_reove(html, shop):
     return items
 
 
-PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts, "reove": parse_reove}
+def parse_roysbrown(html, shop):
+    """roysbrown.com 형식: 이름은 strong.name, 가격은 .description 안의 판매가/소비자가 li(위쪽 .description3 는 숨김 사본)."""
+    soup = BeautifulSoup(html, "html.parser")
+    items = []
+    for li in soup.select("ul.prdList > li[id^=anchorBoxId_]"):
+        no = li["id"].replace("anchorBoxId_", "")
+
+        name_el = li.select_one(".description .name a")
+        img_el = li.select_one(".prdImg img")
+        link_el = li.select_one(".prdImg a[href]")
+        sale_el = li.select_one(".description li[rel='판매가']")
+        orig_el = li.select_one(".description li[rel='소비자가']")
+
+        def won(el):
+            return int(re.sub(r"[^\d]", "", el.get_text().replace("원", " ").split("(")[0]) or 0) if el else 0
+
+        sale_price = won(sale_el)
+        original = won(orig_el)
+        soldout = bool(li.select_one("img[alt*='품절'], img[src*='soldout'], img[src*='sold_out']"))
+
+        items.append({
+            "shop_id": shop["id"],
+            "shop_name": shop["name"],
+            "product_no": int(no),
+            "name": name_el.get_text(strip=True) if name_el else "",
+            "price": sale_price or original,
+            "original_price": original if sale_price and original > sale_price else None,
+            "image": abs_url(shop["base_url"], img_el["src"]) if img_el else "",
+            "url": abs_url(shop["base_url"], link_el["href"]) if link_el else "",
+            "soldout": soldout,
+        })
+    return items
+
+
+PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts, "reove": parse_reove, "roysbrown": parse_roysbrown}
 
 
 MAX_PAGES_DEFAULT = 100  # 끝을 못 찾는 경우를 막는 안전장치. 몰이 끝 페이지를 주면 그 전에 멈춘다

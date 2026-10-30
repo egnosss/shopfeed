@@ -23,5 +23,14 @@
     "list_paths": [
       "/product/list.html?cate_no=82"
     ]
+  },
+  {
+    "id": "roysbrown",
+    "name": "로이스브라운",
+    "parser": "roysbrown",
+    "base_url": "https://roysbrown.com",
+    "list_paths": [
+      "/product/list.html?cate_no=115"
+    ]
   }
 ]
