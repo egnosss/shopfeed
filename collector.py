@@ -209,8 +209,47 @@ def parse_jud(html, shop):
     return items
 
 
+def parse_stanst(html, shop):
+    """stanst.kr 형식: 할인 상품은 판매가(취소선)와 할인판매가 두 줄, 할인이 없으면 판매가 한 줄."""
+    soup = BeautifulSoup(html, "html.parser")
+    items = []
+    for li in soup.select("ul.prdList > li[id^=anchorBoxId_]"):
+        no = li["id"].replace("anchorBoxId_", "")
+
+        name_el = li.select_one(".description .name a")
+        img_el = li.select_one(".thumbnail img")
+        link_el = li.select_one(".thumbnail a[href]")
+
+        def spec(rel):
+            row = li.select_one(f".description li[rel='{rel}']")
+            m = re.search(r"([\d,]{3,})", row.get_text().split(":", 1)[-1]) if row else None
+            return int(m.group(1).replace(",", "")) if m else 0
+
+        name = ""
+        if name_el:
+            for t in name_el.select(".title"):
+                t.decompose()
+            name = name_el.get_text(strip=True)
+        list_price = spec("판매가")
+        sale_price = spec("할인판매가")
+        soldout = bool(li.select_one("img[alt*='품절'], img[src*='soldout'], img[src*='sold_out'], .soldout"))
+
+        items.append({
+            "shop_id": shop["id"],
+            "shop_name": shop["name"],
+            "product_no": int(no),
+            "name": name,
+            "price": sale_price or list_price,
+            "original_price": list_price if sale_price and list_price > sale_price else None,
+            "image": abs_url(shop["base_url"], img_el["src"]) if img_el else "",
+            "url": abs_url(shop["base_url"], link_el["href"]) if link_el else "",
+            "soldout": soldout,
+        })
+    return items
+
+
 PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts, "reove": parse_reove, "roysbrown": parse_roysbrown,
-           "jud": parse_jud}
+           "jud": parse_jud, "stanst": parse_stanst}
 
 
 MAX_PAGES_DEFAULT = 100  # 끝을 못 찾는 경우를 막는 안전장치. 몰이 끝 페이지를 주면 그 전에 멈춘다

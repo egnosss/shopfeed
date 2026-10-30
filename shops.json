@@ -46,5 +46,14 @@
       "/product/list.html?cate_no=28",
       "/product/list.html?cate_no=45"
     ]
+  },
+  {
+    "id": "stanst",
+    "name": "스탠에스티",
+    "parser": "stanst",
+    "base_url": "https://stanst.kr",
+    "list_paths": [
+      "/product/list.html?cate_no=57"
+    ]
   }
 ]
