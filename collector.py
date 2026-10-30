@@ -167,7 +167,50 @@ def parse_roysbrown(html, shop):
     return items
 
 
-PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts, "reove": parse_reove, "roysbrown": parse_roysbrown}
+def parse_jud(html, shop):
+    """jud.co.kr 형식: spec 목록의 li 마다 제목(판매가/소비자가)이 span 으로 들어 있다."""
+    soup = BeautifulSoup(html, "html.parser")
+    items = []
+    for li in soup.select("ul.prdList > li[id^=anchorBoxId_]"):
+        no = li["id"].replace("anchorBoxId_", "")
+
+        name_el = li.select_one(".description .name a")
+        img_el = li.select_one(".prdImg img")
+        link_el = li.select_one(".prdImg a[href]")
+
+        def spec(label):
+            for row in li.select(".description ul.spec > li"):
+                t = row.select_one("strong.title")
+                if t and label in t.get_text():
+                    m = re.search(r"([\d,]+)\s*원", row.get_text().replace(t.get_text(), "", 1))
+                    return int(m.group(1).replace(",", "")) if m else 0
+            return 0
+
+        name = ""
+        if name_el:
+            for t in name_el.select(".title"):
+                t.decompose()
+            name = name_el.get_text(strip=True)
+        sale_price = spec("판매가")
+        original = spec("소비자가")
+        soldout = bool(li.select_one("img[alt*='품절'], img[src*='soldout'], img[src*='sold_out']"))
+
+        items.append({
+            "shop_id": shop["id"],
+            "shop_name": shop["name"],
+            "product_no": int(no),
+            "name": name,
+            "price": sale_price or original,
+            "original_price": original if sale_price and original > sale_price else None,
+            "image": abs_url(shop["base_url"], img_el["src"]) if img_el else "",
+            "url": abs_url(shop["base_url"], link_el["href"]) if link_el else "",
+            "soldout": soldout,
+        })
+    return items
+
+
+PARSERS = {"archive": parse_archive, "thoughts": parse_thoughts, "reove": parse_reove, "roysbrown": parse_roysbrown,
+           "jud": parse_jud}
 
 
 MAX_PAGES_DEFAULT = 100  # 끝을 못 찾는 경우를 막는 안전장치. 몰이 끝 페이지를 주면 그 전에 멈춘다

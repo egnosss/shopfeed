@@ -32,5 +32,19 @@
     "list_paths": [
       "/product/list.html?cate_no=115"
     ]
+  },
+  {
+    "id": "jud",
+    "name": "주드",
+    "parser": "jud",
+    "base_url": "https://jud.co.kr",
+    "list_paths": [
+      "/product/list.html?cate_no=24",
+      "/product/list.html?cate_no=25",
+      "/product/list.html?cate_no=26",
+      "/product/list.html?cate_no=27",
+      "/product/list.html?cate_no=28",
+      "/product/list.html?cate_no=45"
+    ]
   }
 ]

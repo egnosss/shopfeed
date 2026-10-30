@@ -14,28 +14,30 @@ def _en(*words):
 
 
 RULES = [
-    ("원피스", _en("dress", "one-piece", "onepiece", "jumpsuit") + ["원피스", "드레스", "점프수트"]),
+    ("원피스", _en("dress", "one-piece", "onepiece", "jumpsuit", "ops") + ["원피스", "드레스", "점프수트"]),
     ("아우터", _en("puffer", "padding", "jacket", "jk", "jumper", "coat", "blazer", "blouson", "parka",
-                 "trench", "mustang", "duck-down", "goose-down", "down", "zip-up", "zipup", "cape")
+                 "trench", "mustang", "duck-down", "goose-down", "down", "zip-up", "zipup", "cape", "jp", "pd", "ct")
      + ["패딩", "자켓", "재킷", "점퍼", "코트", "블레이저", "블루종", "(?<!알)파카", "트렌치",
-        "무스탕", "다운", "집업", "케이프"]),
-    ("니트·가디건", _en("knit", "cardigan", "pullover", "sweater") + ["니트", "가디건", "풀오버", "스웨터"]),
+        "무스탕", "다운", "집업", "케이프", "야상"]),
+    ("니트·가디건", _en("knit", "cardigan", "pullover", "sweater", "cd", "nt") + ["니트", "가디건", "풀오버", "스웨터"]),
     # 니트 베스트는 위의 니트 규칙이 먼저 잡고, 니트가 아닌 베스트·조끼만 아우터로 본다
     ("아우터", _en("vest") + ["베스트", "조끼"]),
     ("상의", _en("tee", "t-shirt", "shirt", "blouse", "top", "sleeve", "long-sleeve", "hoodie", "sweatshirt",
-               "polo", "henley", "camisole", "bustier", "sleeveless", "half t", "t", "bra")
+               "polo", "henley", "camisole", "bustier", "sleeveless", "half t", "t", "bra", "sh", "ns", "bl", "mtm")
      + ["티셔츠", "셔츠", "블라우스", "탑", "슬리브", "맨투맨", "후드", "카라티", "나시", "민소매", "캐미솔",
-        "뷔스티에", "비스티에", "반팔", "긴팔"]),
+        "뷔스티에", "비스티에", "반팔", "긴팔", "(?<=\\s)티(?=\\s|\\[|$)", "(?:라운드|슬림|브이넥)티"]),
     ("하의", _en("pants", "pt", "denim", "jeans", "slacks", "trousers", "skirt", "shorts", "leggings", "joggers",
-               "bermuda", "culottes")
-     + ["팬츠", "데님", "청바지", "슬랙스", "트라우저", "스커트", "치마", "쇼츠", "반바지", "레깅스", "조거"]),
+               "bermuda", "culottes", "sk", "sl")
+     + ["팬츠", "데님", "청바지", "슬랙스", "트라우저", "진(?=\\s|\\[|$)", "스커트", "치마", "쇼츠", "반바지", "레깅스", "조거"]),
     ("잡화", _en("bag", "cap", "hat", "beanie", "scarf", "muffler", "belt", "socks", "gloves", "shoes",
                "sneakers", "sneaker", "loafers", "loafer", "boots", "boot", "sandals", "sandal", "slippers",
                "slipper", "flip-flops", "flip-flop", "mule", "mules", "heel", "heels", "flat", "flats",
-               "wallet", "tote", "shoulder", "crossbody")
+               "wallet", "tote", "shoulder", "crossbody", "necklace", "earring", "earrings", "bracelet", "ring", "rings")
      + ["가방", "백", "모자", "비니", "머플러", "스카프", "목도리", "벨트", "양말", "장갑", "슈즈", "스니커즈",
-        "로퍼", "부츠", "샌들", "슬리퍼", "지갑", "토트", "크로스", "주얼리", "목걸이", "귀걸이", "팔찌", "반지"]),
+        "로퍼", "부츠", "샌들", "슬리퍼", "스타킹", "삭스", "레그워머", "쪼리", "뮬", "플랫", "스크런치", "지갑", "토트", "크로스", "주얼리", "목걸이", "귀걸이", "팔찌", "반지"]),
 ]
+# 위 규칙에 하나도 안 맞은 "세트" 는 마지막에 원피스·세트로 묶는다 (예: "Knit set" 은 위에서 니트가 먼저 잡는다)
+RULES.append(("원피스", _en("set") + ["세트(?![가-힣])"]))
 COMPILED = [(cat, re.compile("|".join(pats), re.IGNORECASE)) for cat, pats in RULES]
 
 
